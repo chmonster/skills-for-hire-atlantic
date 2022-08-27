@@ -6,7 +6,7 @@ $(document).ready(function () {
   const loren = function(label) {
     $.ajax({
       type: 'GET',
-      url: 'http://metaphorpsum.com/paragraphs/3?p=true', 
+      url: 'https://corsproxy.io/?http%3A%2F%2Fmetaphorpsum.com%2Fparagraphs%2F3%3Fp%3Dtrue', 
       crossDomain: true,
       dataType: 'html',
       success: function(result) { 

@@ -4,9 +4,10 @@
 $(document).ready(function () {
 
   const loren = function(label) {
+    const proxiedUrl = 'https://corsproxy.io/?' + encodeURIComponent('http://metaphorpsum.com/paragraphs/3?p=true');
     $.ajax({
       type: 'GET',
-      url: 'https://corsproxy.io/?http%3A%2F%2Fmetaphorpsum.com%2Fparagraphs%2F3%3Fp%3Dtrue', 
+      url: proxiedUrl, 
       crossDomain: true,
       dataType: 'html',
       success: function(result) { 

@@ -1,20 +1,7 @@
+
+
+
 $(document).ready(function () {
-
-  // $('#canoe').load(function() {
-  //   const mrcWidth=Math.floor(50+50*Math.random()).toString()+"px";
-  //   const imgWidth=$(this).width();
-  //   const imgHeight=$(this).height();
-
-  //   $('#mrcanoehead>img').attr({
-  //     "width": mrcWidth,
-  //     "height": "auto"
-  //   });
-  //   $('#mrcanoehead>img').css({
-  //     "left": Math.floor(imgWidth*Math.random()).toString()+"px",
-  //     "top": Math.floor(imgHeight*Math.random()).toString()+"px"
-  //   });
-  // });
-
 
   const loren = function(label) {
     $.ajax({
@@ -31,16 +18,55 @@ $(document).ready(function () {
     });
   };
 
+  const positionMrC = function() {
+    const imgWidth=$('#photo-area').width();
+    const imgHeight=$('#photo-area').height();
+    console.log(imgWidth, imgHeight);
+    
+    $('#mrcanoehead').attr({
+      "width": ((imgWidth*0.05)+Math.floor(Math.random()*imgWidth*0.05)).toString()+'px',
+      "height": "auto"
+    });
+
+    const mrcWidth=$('#mrcanoehead').width();
+    const mrcHeight=$('#mrcanoehead').height();
+    console.log(mrcWidth, mrcHeight);
+
+    $('#mrcanoehead').css({
+      "left": (Math.floor((imgWidth-mrcWidth)*Math.random())).toString()+"px",
+      "top": (Math.floor((imgHeight-mrcHeight)*Math.random())).toString()+"px",
+    });
+
+    $('#mrcanoehead').show();
+  }
+
   loren('#loren1');
   loren('#loren2');
+  //loren('.loren');
 
+  $('#mrcanoehead').hide();
   $('nav').hide();
   $('#hamburger').click(function() {
-    //  $('nav').toggle({ direction: "left" },'fast', 'swing');
     $('nav').animate({width: 'toggle'}, 'fast', 'swing');
   });
 
 
+  //const mrcWidth=Math.floor(50+50*Math.random()).toString()+"px";
+  $('#canoe-img').on('load', function(){
+    positionMrC();
+  });
+
+  $('#mrcanoehead').hover(function() {
+    positionMrC();
+  });
+
+  $('#paddle').click(function() {
+    $('#mrcanoehead').toggle();
+  });
+
+  $(window).resize(function(){
+    positionMrC();
+  })
 
 });
 

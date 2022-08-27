@@ -42,16 +42,13 @@ $(document).ready(function () {
 
   loren('#loren1');
   loren('#loren2');
-  //loren('.loren');
 
   $('#mrcanoehead').hide();
   $('nav').hide();
   $('#hamburger').click(function() {
     $('nav').animate({width: 'toggle'}, 'fast', 'swing');
   });
-
-
-  //const mrcWidth=Math.floor(50+50*Math.random()).toString()+"px";
+  
   $('#canoe-img').on('load', function(){
     positionMrC();
   });

@@ -2,7 +2,7 @@
 
 /* For mobile devices */
 @media only screen and (max-width: 400px) {
-  #canoe-img, header, article {
+  #canoe-img, article {
     width: 100%;
   }
   nav {
@@ -12,27 +12,28 @@
 
 /* For tablets */
 @media only screen and (min-width: 400px) {
-  #canoe-img, header, article {
+  #canoe-img, article {
     width: 100%;
   }
   nav {
-    width: 400px;
+    width: 200px;
+    height: 100%;
   }
 }
 
 /* For desktops */
 @media only screen and (min-width: 1000px) {
-  #canoe-img, header, article {
+  #canoe-img, article {
     width: 1000px;
   }
   nav {
-    width: 400px;
+    width: 200px;
+    height: 100%;
   }
 }
 
 body {
   background-color: black;
-  background-repeat: no-repeat;
   color: white;
   font-family: Helvetica, Verdana, sans-serif;
 }
@@ -46,6 +47,7 @@ header {
   display: flex;
   align-items: center;
   justify-content:space-between;
+  width: 100%;
   height: 50px;
   background-color: red;
   margin: 0px auto;
@@ -54,6 +56,8 @@ header {
 nav {
   position:absolute;
   background-color: red;  
+  overflow:hidden;
+  white-space:nowrap;
   color: white;
   padding: 5px;
 }
@@ -75,4 +79,8 @@ nav a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.loren p {
+  padding: 3px;
 }

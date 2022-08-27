@@ -1,26 +1,78 @@
+
+
+/* For mobile devices */
+@media only screen and (max-width: 400px) {
+  #canoe-img, header, article {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+  }
+}
+
+/* For tablets */
+@media only screen and (min-width: 400px) {
+  #canoe-img, header, article {
+    width: 100%;
+  }
+  nav {
+    width: 400px;
+  }
+}
+
+/* For desktops */
+@media only screen and (min-width: 1000px) {
+  #canoe-img, header, article {
+    width: 1000px;
+  }
+  nav {
+    width: 400px;
+  }
+}
+
 body {
   background-color: black;
-  background-image: url("/img/canoe.jpg");
   background-repeat: no-repeat;
-  color: red;
-  width: 1000px;
-  font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-family: Helvetica, Verdana, sans-serif;
 }
 
-img.hamburger, img.paddle {
-  height: 3em;
+#mrcanoehead>img {
+  position:absolute;
+  z-index: 1;
 }
 
-#mrcanoehead {
-  position: absolute;
-}
-
-h1 {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+header {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  height: 50px;
+  background-color: red;
+  margin: 0px auto;
 }
 
 nav {
-  height: 15px;
+  position:absolute;
+  background-color: red;  
+  color: white;
+  padding: 5px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#canoe-img, article {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

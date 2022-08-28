@@ -11,10 +11,29 @@ $(document).ready(function () {
         $(label).html(result);
       },
       error: function(error) {
-        $('article').html(error.status + ' ' + error.statusText);
+        $(label).html(error.status + ' ' + error.statusText);
       }
     });
   };
+
+  const randomDate = function(label) {
+    //6 months range
+    const range = 6 * 30 * 24 * 60 * 60 * 1000;
+    const dateObj = new Date(Math.floor(Math.random()*range + Date.now()));
+    const duration = Math.ceil(Math.random()*7);
+    const dateObj2 = new Date(dateObj.getTime() + (duration-1)*24*60*60*1000);
+    const dateString = dateObj.toLocaleDateString(
+      'en-us', 
+      { weekday:"long", year:"numeric", month:"short", day:"numeric"}
+    );
+    const dateString2 = dateObj2.toLocaleDateString(
+      'en-us', 
+      { weekday:"long", year:"numeric", month:"short", day:"numeric"}
+    );
+
+
+    $(label).html(dateString + ' to ' + dateString2 + ' (' + duration + ' days'+')');
+  }
 
   const positionMrC = function() {
     const imgWidth=$('#photo-area').width();
@@ -40,6 +59,9 @@ $(document).ready(function () {
 
   loren('#loren1');
   loren('#loren2');
+  randomDate('#random-date1');
+  randomDate('#random-date2');
+  
 
   $('#mrcanoehead').hide();
   $('nav').hide();

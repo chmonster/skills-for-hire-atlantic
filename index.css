@@ -10,9 +10,11 @@
   }
   h1, nav a {
     font-size: 4vw;
+    padding: 1vw 0;
   }
-  h2, article{
+  h2, article, h3 {
     font-size: 3vw;
+    padding: 1vw 0;
   }
 }
 
@@ -27,9 +29,11 @@
   }
   h1, nav a {
     font-size: 4vw;
+    padding: 1vw 0;
   }
-  h2, article{
+  h2, article, h3 {
     font-size: 3vw;
+    padding: 1vw 0;
   }
 }
 
@@ -44,9 +48,11 @@
   }
   h1, nav a {
     font-size: 40px;
+    padding: 10px 0;
   }
-  h2, article{
+  h2, article, h3 {
     font-size: 30px;
+    padding: 10px 0;
   }
 }
 
@@ -72,8 +78,6 @@ header {
   margin: 0px auto;
   z-index: 2;
 }
-
-
 
 nav {
   position:fixed;
@@ -116,5 +120,13 @@ article {
 
 .loren p, h2{
   padding: 3px;
+}
+
+.adventure {
+  padding: 2px;
+}
+
+.adventure h2 {
+  text-decoration: underline;
 }
 

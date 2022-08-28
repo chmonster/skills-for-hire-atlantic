@@ -40,18 +40,25 @@ $(document).ready(function () {
     const imgHeight=$('#photo-area').height();
     //console.log(imgWidth, imgHeight);
     
-    $('#mrcanoehead').attr({
-      "width": ((imgWidth*0.05)+Math.floor(Math.random()*imgWidth*0.05)).toString()+'px',
+    $('#mrcanoehead-img').attr({
+      "width": (Math.floor(imgWidth*0.05)+Math.floor(Math.random()*imgWidth*0.05)).toString()+'px',
       "height": "auto"
     });
 
-    const mrcWidth=$('#mrcanoehead').width();
-    const mrcHeight=$('#mrcanoehead').height();
+    const mrcWidth=$('#mrcanoehead-img').width();
+    const mrcHeight=$('#mrcanoehead-img').height();
+    const bubbleWidth=$('#bubble').width();
+    const bubbleHeight=-$('#bubble').height();
+
     //console.log(mrcWidth, mrcHeight);
 
     $('#mrcanoehead').css({
-      "left": (Math.floor((imgWidth-mrcWidth)*Math.random())).toString()+"px",
-      "top": (Math.floor((imgHeight-mrcHeight)*Math.random())).toString()+"px",
+      "left": (Math.floor((imgWidth-mrcWidth-bubbleWidth)*Math.random())).toString()+"px",
+      "top": (Math.floor((imgHeight-mrcHeight-bubbleHeight)*Math.random())).toString()+"px",
+    });
+    $('#bubble').css({
+      'left': (0*bubbleWidth + 0.5*mrcWidth).toString() +'px',
+      'top' : (0*bubbleHeight + -0.5*mrcHeight).toString() +'px'
     });
 
     $('#mrcanoehead').show();

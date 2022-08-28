@@ -8,16 +8,28 @@
   nav {
     width: 100%;
   }
+  h1, nav a {
+    font-size: 4vw;
+  }
+  h2, article{
+    font-size: 3vw;
+  }
 }
 
 /* For tablets */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 401px) {
   #canoe-img, #photo-area, article {
     width: 100%;
   }
   nav {
-    width: 200px;
+    width: 25vw;
     height: 100%;
+  }
+  h1, nav a {
+    font-size: 4vw;
+  }
+  h2, article{
+    font-size: 3vw;
   }
 }
 
@@ -27,8 +39,14 @@
     width: 1000px;
   }
   nav {
-    width: 200px;
+    width: 250px;
     height: 100%;
+  }
+  h1, nav a {
+    font-size: 40px;
+  }
+  h2, article{
+    font-size: 30px;
   }
 }
 
@@ -55,6 +73,8 @@ header {
   z-index: 2;
 }
 
+
+
 nav {
   position:fixed;
   background-color: red;  
@@ -72,6 +92,7 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -82,11 +103,11 @@ article, #photo-area {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 article {
   text-align: justify; 
-  
 }
 
 #photo-area {

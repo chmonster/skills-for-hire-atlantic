@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(function () {
 
   const loren = function(label) {
@@ -22,7 +19,7 @@ $(document).ready(function () {
   const positionMrC = function() {
     const imgWidth=$('#photo-area').width();
     const imgHeight=$('#photo-area').height();
-    console.log(imgWidth, imgHeight);
+    //console.log(imgWidth, imgHeight);
     
     $('#mrcanoehead').attr({
       "width": ((imgWidth*0.05)+Math.floor(Math.random()*imgWidth*0.05)).toString()+'px',
@@ -31,7 +28,7 @@ $(document).ready(function () {
 
     const mrcWidth=$('#mrcanoehead').width();
     const mrcHeight=$('#mrcanoehead').height();
-    console.log(mrcWidth, mrcHeight);
+    //console.log(mrcWidth, mrcHeight);
 
     $('#mrcanoehead').css({
       "left": (Math.floor((imgWidth-mrcWidth)*Math.random())).toString()+"px",
@@ -47,7 +44,11 @@ $(document).ready(function () {
   $('#mrcanoehead').hide();
   $('nav').hide();
   $('#hamburger').click(function() {
-    $('nav').animate({width: 'toggle'}, 'fast', 'swing');
+    if($(window).width() > 400) {
+      $('nav').animate({width: 'toggle'}, 'fast', 'swing');
+    } else {
+      $('nav').animate({height: 'toggle'}, 'fast', 'swing');
+    }
   });
   
   $('#canoe-img').on('load', function(){

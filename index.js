@@ -38,10 +38,9 @@ $(document).ready(function () {
   const positionMrC = function() {
     const imgWidth=$('#photo-area').width();
     const imgHeight=$('#photo-area').height();
-    //console.log(imgWidth, imgHeight);
     
     $('#mrcanoehead-img').attr({
-      "width": (Math.floor(imgWidth*0.05)+Math.floor(Math.random()*imgWidth*0.05)).toString()+'px',
+      "width": (Math.floor(imgWidth*0.05+Math.random()*imgWidth*0.05)).toString()+'px',
       "height": "auto"
     });
 
@@ -50,15 +49,25 @@ $(document).ready(function () {
     const bubbleWidth=$('#bubble').width();
     const bubbleHeight=-$('#bubble').height();
 
+    const allowedWidth=imgWidth-bubbleWidth;
+    const allowedHeight=imgHeight-mrcHeight-1.5*bubbleHeight;
+
+    const mrcLeft=(Math.floor(allowedWidth*Math.random()));
+    const mrcTop=(Math.floor(1.5*bubbleHeight+allowedHeight*Math.random()));
+
     //console.log(mrcWidth, mrcHeight);
 
+    
     $('#mrcanoehead').css({
-      "left": (Math.floor((imgWidth-mrcWidth-bubbleWidth)*Math.random())).toString()+"px",
-      "top": (Math.floor((imgHeight-mrcHeight-bubbleHeight)*Math.random())).toString()+"px",
+      "left": (mrcLeft).toString()+'px',
+      "top": (mrcTop).toString()+'px'
     });
+    // $('#bubble::before').css({
+
+    // });
     $('#bubble').css({
-      'left': (0*bubbleWidth + 0.5*mrcWidth).toString() +'px',
-      'top' : (0*bubbleHeight + -0.5*mrcHeight).toString() +'px'
+      'left': (mrcWidth-0.4*bubbleWidth).toString() +'px',
+      'top' : (-0.1*mrcHeight+bubbleHeight).toString() +'px'
     });
 
     $('#mrcanoehead').show();

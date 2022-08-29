@@ -148,15 +148,15 @@ article {
   color: black;
   border: 0.5vmin solid black;
   border-radius: 100%;
-  width: 10vmax;
-  height: 5vmax;
+  width: 20vw;
+  height: 10vw;
   /* left: 1vw;
   top: -5vw; */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1vmax;
+  font-size: 2vw;
   background: #ffd;
   box-shadow: 0 -0.25vmin, 0 0.125vmin;
   font-family: "Comic Sans", "Comic Neue", sans-serif;

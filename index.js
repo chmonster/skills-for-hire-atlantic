@@ -93,7 +93,7 @@ $(document).ready(function () {
     positionMrC();
   });
 
-  $('bubble').hover(function() {
+  $('#bubble').hover(function() {
     positionMrC();
   });
 
@@ -101,9 +101,9 @@ $(document).ready(function () {
     $('#mrcanoehead').toggle();
   });
 
-  $(window).resize(function(){
-    positionMrC();
-  })
+  // $(window).resize(function(){
+  //   positionMrC();
+  // })
 
 });
 

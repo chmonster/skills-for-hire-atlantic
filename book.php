@@ -1,18 +1,25 @@
+<?php 
+  echo <<<BOOKING
 
-
-<!-- <main>
-    <h1>Book Your Trip</h1>
-    <form action='book' method='get'>
+  <article>
+    <form action='#' method='GET'>
+      <label for='name'>Name:</label>
+      <input type='text' name='name' id='name' /><br />
       <label for='email'>Email:</label>
-      <input type='text' name='email' id='email' />
+      <input type='text' name='email' id='email' /><br />
       <label for='location'>Location:</label>
       <select name='location' id='location'>
         <option name='Halifax'>Halifax</option>
         <option name='Sydney'>Sydney</option>
-      </select>
+      </select><br />
       <label for='date'>Date:</label>
-      <input type='text' name='date' id='date' />
-      <textarea name='comments'>Comments</textarea>
-      <button type='submit'>Submit</button>
+      <input type='text' name='date' id='date' /><br />
+      <label for="comments">Comments:</label>
+      <textarea name='comments'></textarea><br />
+      <button type='submit'>Submit</button><br />
     </form>
-  </main> -->
+  </article>
+
+  BOOKING;
+
+?>

@@ -18,4 +18,4 @@
       </section>
     </article>`
 
-  ADVENTURES;
+ADVENTURES;

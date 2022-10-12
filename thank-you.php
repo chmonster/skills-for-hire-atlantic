@@ -20,4 +20,4 @@
       <a href='/' class='close-button'>+</a>
     </div>
   </article>
-  THANKS;
+THANKS;

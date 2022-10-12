@@ -19,5 +19,3 @@
     </article>`
 
   ADVENTURES;
-
-?>

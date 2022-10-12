@@ -5,7 +5,7 @@
   $date=$_GET['date'];
   $comments=$_GET['comments'];
   
-  echo <<<EOL
+  echo <<<THANKS
   <article id='thank-you' class='modal modal-show'>
     <div class='modal-content'>
       Thanks for booking! <br />
@@ -20,5 +20,4 @@
       <a href='/' class='close-button'>+</a>
     </div>
   </article>
-  EOL;
-?>
+  THANKS;

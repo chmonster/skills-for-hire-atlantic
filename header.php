@@ -17,4 +17,3 @@ echo <<<HEADER
     <script src="index.js"></script>
   </head>
   HEADER;
-  ?>

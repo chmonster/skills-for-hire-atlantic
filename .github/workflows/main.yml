@@ -30,4 +30,4 @@ jobs:
     - name: Add Known Hosts
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
     - name: copy files over ssh
-      run: rsync -avz "${PWD}"/skillsforhireatlantic/ perry@${{ secrets.SSH_HOST }}:mooresie.net/mrcanoehead/
+      run: rsync -avz ${{env.GITHUB_WORKSPACE}} perry@${{ secrets.SSH_HOST }}:mooresie.net/mrcanoehead/

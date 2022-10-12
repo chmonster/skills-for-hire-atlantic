@@ -13,5 +13,3 @@
     
   include_once('adventures.php');
   include_once('footer.php');
-
-?>

@@ -92,7 +92,7 @@ nav li {
   list-style-type: none;
 }
 
-nav a {
+nav a, .modal-content a {
   color: white;
   text-decoration: none;
 }
@@ -162,3 +162,39 @@ article {
   font-family: "Comic Sans", "Comic Neue", sans-serif;
 }
 
+.modal{
+  display:flex;
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition: .3s opacity ease-in-out;
+  padding: 2em;
+  position:fixed;
+  top: 25vh;
+  left: 25vw;
+  background: rgba(255,0,0,.85);
+  width: 50vw;
+  height: 50vh;
+  /* background-color:red; */
+  pointer-events: none;
+}
+
+.modal:target, .modal-show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* #adventure-form .close, #thank-you .close { */
+.close-button {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  transform: rotate(45deg);
+}

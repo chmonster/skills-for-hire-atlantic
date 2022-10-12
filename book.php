@@ -1,8 +1,8 @@
 <?php 
   echo <<<BOOKING
 
-  <article>
-    <form action='#' method='GET'>
+  <article id = 'adventure-form' class='modal'>
+    <form action='#' method='GET' class='modal-content'>
       <label for='name'>Name:</label>
       <input type='text' name='name' id='name' /><br />
       <label for='email'>Email:</label>
@@ -16,7 +16,8 @@
       <input type='text' name='date' id='date' /><br />
       <label for="comments">Comments:</label>
       <textarea name='comments'></textarea><br />
-      <button type='submit'>Submit</button><br />
+      <button type='submit'>Submit</button>
+      <a href='#' class='close-button'>+</a>
     </form>
   </article>
 

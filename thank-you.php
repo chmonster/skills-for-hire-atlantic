@@ -16,9 +16,9 @@
       Location: $location <br />
       Date: $date <br />
       Comments: $comments <br />
-      We'll be in contact soon!
-      <a href='/'><button>Close</button></a>
+      We'll be in contact soon!<br />
+      <a href='#'><button>Close</button></a>
     </div>
-    <a href='/' class='close-button'>+</a>
+    <a href='#' class='close-button'>+</a>
   </article>
 THANKS;

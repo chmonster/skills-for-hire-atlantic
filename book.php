@@ -3,7 +3,7 @@
 
   <article id = 'adventure-form' class='modal'>
     
-    <form action='#' method='GET' class='modal-content'>
+    <form action='#thank-you' method='GET' class='modal-content'>
       <h3>Book your next great adventure now!</h3>
       <label for='name'>Name:</label>
       <input type='text' name='name' id='name' /><br />

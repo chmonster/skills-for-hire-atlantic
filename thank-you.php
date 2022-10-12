@@ -8,7 +8,7 @@
   echo <<<THANKS
   <article id='thank-you' class='modal modal-show'>
     <div class='modal-content'>
-      Thanks for booking! <br />
+      <h3>Thanks for booking!</h3>
       Here are your details: <br />
       Name: $name <br />
       Email: $email <br /> 
@@ -17,7 +17,8 @@
       Comments: $comments <br />
       
       We'll be in contact soon!
-      <a href='/' class='close-button'>+</a>
+      <button class='close-button>Close</button>
     </div>
+    <a href='/' class='close-button'>+</a>
   </article>
 THANKS;

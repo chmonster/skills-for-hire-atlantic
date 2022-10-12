@@ -29,4 +29,4 @@ jobs:
     - name: Add Known Hosts
       run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
     - name: rsync over ssh
-      run: rsync -avzn ./ perry@mooresie.net:/mooresie.net/mrcanoehead/
+      run: rsync -avzn ./ perry@${{ secrets.SSH_HOST }}:/mooresie.net/mrcanoehead/

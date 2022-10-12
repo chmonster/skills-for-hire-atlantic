@@ -19,8 +19,7 @@
       <label for="comments">Comments:</label>
       <textarea name='comments'></textarea><br />
       <button type='submit'>Submit</button>
-      <button class='close-button'>Close</button>
-    </form>
+    </form><br />
     <a href='#' class='close-button'>+</a>
   </article>
 

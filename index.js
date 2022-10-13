@@ -61,6 +61,7 @@ $(document).ready(function () {
   })
 
   $('#paddle').click(function () {
+    positionMrC()
     $('#mrcanoehead').toggle()
   })
 

@@ -17,7 +17,7 @@
     padding: 1vw 0;
   }
   input, select, option, textarea, .modal button {
-    font-size: 2vw;
+    font-size: 1.8vw;
     padding: 1vw 0vw;
   }
 
@@ -41,7 +41,7 @@
     padding: 1vw 0;
   }
   input, select, option, textarea, .modal button {
-    font-size: 2vw;
+    font-size: 1.8vw;
     padding: 1vw 0vw;
   }
 }
@@ -64,7 +64,7 @@
     padding: 10px 0;
   }
   input, select, option, textarea, .modal button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 0px;
   }
 }
@@ -127,17 +127,12 @@ article {
 
 label {
   display: inline-block;
-  width: 30%;
+  width: 38%;
   text-align: right;
 }
 
-input, select, option, textarea {
-  width: 60%;
-  text-align: center;
-}
-
-.modal-button {
-  width: 60%;
+input, select, option, textarea, .modal-button {
+  width: 57%;
   text-align: center;
 }
 

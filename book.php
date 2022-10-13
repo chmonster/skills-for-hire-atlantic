@@ -4,7 +4,7 @@
   <article id = 'adventure-form' class='modal'>
     
     <form action='#thank-you' method='GET' class='modal-content'>
-      <h3>Book your next great adventure now!</h3>
+      <h3 style='text-align:center;'>Book your next <br /> great adventure now!</h3>
       <label for='name'>Name:</label>
       <input type='text' name='name' id='name' /><br />
       <label for='email'>Email:</label>

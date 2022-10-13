@@ -14,7 +14,7 @@
       Name: $name <br />
       Email: $email <br /> 
       Location: $location <br />
-      Date: $date <br />
+      Date: <time datetime="$date">$date</time> <br />
       Comments: $comments <br />
       We'll be in contact soon!<br />
       <a href='#' class='modal-button'><button>Close</button></a>

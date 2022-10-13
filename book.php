@@ -18,7 +18,7 @@
       <input type='date' name='date' id='date' /><br />
       <label for="comments">Comments:</label>
       <textarea name='comments'></textarea><br />
-      <button type='submit'>Submit</button>
+      <button type='submit' class='modal-button'>Submit</button>
     </form><br />
     <a href='#' class='close-button'>+</a>
   </article>

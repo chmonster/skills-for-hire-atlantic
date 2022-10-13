@@ -1,21 +1,83 @@
 <?php 
 
-  echo <<<ADVENTURES
+  // const randomDate = function (label) {
+  //   //6 months range
+  //   const range = 6 * 30 * 24 * 60 * 60 * 1000
+  //   const dateObj = new Date(Math.floor(Math.random() * range + Date.now()))
+  //   const duration = Math.ceil(Math.random() * 7)
+  //   const dateObj2 = new Date(
+  //     dateObj.getTime() + (duration - 1) * 24 * 60 * 60 * 1000
+  //   )
+  //   const dateString = dateObj.toLocaleDateString('en-us', {
+  //     weekday: 'long',
+  //     year: 'numeric',
+  //     month: 'short',
+  //     day: 'numeric',
+  //   })
+  //   const dateString2 = dateObj2.toLocaleDateString('en-us', {
+  //     weekday: 'long',
+  //     year: 'numeric',
+  //     month: 'short',
+  //     day: 'numeric',
+  //   })
+  //   $(label).html(
+  //     dateString + ' to ' + dateString2 + ' (' + duration + ' days' + ')'
+  //   )
+  // }
 
-    <article>
-      <h1>Upcoming Adventures</h1>
-      <section class="adventure">
-        <h2>Halifax</h2>
-        <div class="random-date" id="random-date1"></div>
-        <h3>Summary</h3>
-        <div class="loren" id="loren1"></div>
-      </section>
-      <section class="adventure">
-        <h2>Sydney</h2>
-        <div class="random-date" id="random-date2"></div>
-        <h3>Summary</h3>
-        <div class="loren" id="loren2"></div>
-      </section>
-    </article>`
+date_default_timezone_set('America/Halifax');
+const SECONDS_PER_DAY = 24*60*60;
+const DATE_FORMAT = 'l, F j, Y';
 
-ADVENTURES;
+function randomDate() {
+  $today = time();
+  $duration = random_int(1,14);
+  $timestamp1 = $today+random_int(7,28)*SECONDS_PER_DAY;
+  $timestamp2 = $timestamp1+$duration*SECONDS_PER_DAY;
+
+  return date(DATE_FORMAT, $timestamp1).' to '.date(DATE_FORMAT, $timestamp2).' ('.$duration.' days)';
+}
+
+function loren($div) {
+  $proxiedURL = "https://corsproxy.io/?http://metaphorpsum.com/paragraphs/3?p=true";
+  $fp = fopen($proxiedURL, 'r');
+  $outstring = PHP_EOL.'<div class="loren" id=\''.$div.'\'>'.PHP_EOL.stream_get_contents($fp).PHP_EOL.'</div>';
+  fclose($fp);
+  return $outstring;
+}
+  
+
+
+echo <<<ADVENTURES1
+  <article>
+    <h1>Upcoming Adventures</h1>
+    <section class="adventure">
+      <h2>Halifax</h2>
+ADVENTURES1;
+
+echo '<div class="random-date" id="random-date1">'.randomDate().'</div>';
+
+echo <<<ADVENTURES1a
+  <h3>Summary</h3>
+ADVENTURES1a;
+
+echo loren('loren1');
+
+echo <<<ADVENTURES2
+  </section>
+  <section class="adventure">
+    <h2>Sydney</h2>
+ADVENTURES2;
+
+echo '<div class="random-date" id="random-date2">'.randomDate().'</div>';
+    
+echo <<<ADVENTURES2a
+    <h3>Summary</h3>
+ADVENTURES2a;
+
+echo loren('loren2');
+
+echo <<<ADVENTURES3
+    </section>
+  </article>`
+ADVENTURES3;

@@ -17,7 +17,7 @@
       Date: $date <br />
       Comments: $comments <br />
       We'll be in contact soon!<br />
-      <a href='#'><button>Close</button></a>
+      <a href='#' class='modal-button'><button>Close</button></a>
     </div>
     <a href='#' class='close-button'>+</a>
   </article>

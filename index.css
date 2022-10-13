@@ -192,7 +192,7 @@ label {
   position:fixed;
   top: 15vh;
   left: 15vw;
-  background: rgba(255,0,0,.85);
+  background: rgba(255,0,0,.70);
   width: 70vw;
   height: 70vh;
   /* background-color:red; */
@@ -226,9 +226,15 @@ label {
   right: 0;
   transform: rotate(45deg);
   text-decoration: none;
+  padding-right: 0.5em;
 }
 .close-button:hover {
   color: black;
+}
+
+.modal-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #hamburger:hover, #paddle:hover {

@@ -23,6 +23,7 @@
     <div id="mrcanoehead">
       <img id="mrcanoehead-img" src="img/mr-canoehead.png" alt="Mr. Canoehead, Great Canadian">
       <div id="bubble" alt="a comic-style speech bubble">$messageFromMrC</div>
+      <div id="bubble-tail" alt="tail for speech bubble"></div>
     </div>
   </figure>
 

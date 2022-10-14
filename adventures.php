@@ -59,5 +59,5 @@ echo loren('loren2');
 
 echo <<<ADVENTURES3
     </section>
-  </article>`
+  </article>
 ADVENTURES3;

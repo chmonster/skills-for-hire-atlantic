@@ -2,12 +2,19 @@
 
   const DATE_FORMAT = 'l, F j, Y';
 
-  $name=$_GET['name'];
-  $email=$_GET['email'];
-  $location=$_GET['location'];
-  $date=$_GET['date'];
+  function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+  $name=test_input($_GET['name']);
+  $email=test_input($_GET['email']);
+  $location=test_input($_GET['location']);
+  $date=test_input($_GET['date']);
   $dateFormatted=date(DATE_FORMAT, strtotime($date));
-  $comments=$_GET['comments'];
+  $comments=test_input($_GET['comments']);
   
   echo <<<THANKS
   <article id='thank-you' class='modal modal-show'>

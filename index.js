@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const pixelString = value => Math.floor(value).toString().concat('px')
+
   const positionMrC = function () {
     const imgWidth = $('#photo-area').width()
     const imgHeight = $('#photo-area').height()
@@ -7,11 +9,11 @@ $(document).ready(function () {
     const minImgWidth = 0.05
     const maxImgWidth = 0.1
 
+    const initialImgWidth =
+      imgWidth * (minImgWidth + Math.random() * (maxImgWidth - minImgWidth))
+
     $('#mrcanoehead-img').attr({
-      width:
-        Math.floor(
-          imgWidth * minImgWidth + Math.random() * imgWidth * maxImgWidth
-        ).toString() + 'px',
+      width: pixelString(initialImgWidth),
       height: 'auto',
     })
 
@@ -29,9 +31,8 @@ $(document).ready(function () {
     const minTop = bubbleHeight
     const minBottom = imgHeight - mrcHeight
 
-    const mrcLeft = Math.floor(minLeft + (minRight - minLeft) * Math.random())
-    const mrcTop = Math.floor(minTop + (minBottom - minTop) * Math.random())
-
+    const mrcLeft = minLeft + (minRight - minLeft) * Math.random()
+    const mrcTop = minTop + (minBottom - minTop) * Math.random()
     //relative to container #mrcanoehead !
     const bubbleLeft = mrcWidth
     const bubbleTop = -bubbleHeight
@@ -43,42 +44,44 @@ $(document).ready(function () {
 
     //execute positioning
     $('#mrcanoehead').css({
-      left: mrcLeft.toString() + 'px',
-      top: mrcTop.toString() + 'px',
+      left: pixelString(mrcLeft),
+      top: pixelString(mrcTop),
     })
     $('#bubble').css({
-      left: bubbleLeft.toString() + 'px',
-      top: bubbleTop.toString() + 'px',
-      width: bubbleWidth.toString() + 'px',
-      height: bubbleHeight.toString() + 'px',
-      fontSize: bubbleFontSize.toString() + 'px',
-      border: borderSize.toString() + 'px solid black',
+      left: pixelString(bubbleLeft),
+      top: pixelString(bubbleTop),
+      width: pixelString(bubbleWidth),
+      height: pixelString(bubbleHeight),
+      fontSize: pixelString(bubbleFontSize),
+      border: pixelString(borderSize).concat(' solid black'),
       boxShadow:
         '0 ' +
-        (-borderSize / 2).toString() +
-        'px, 0 ' +
-        (borderSize / 4).toString() +
-        'px',
+        pixelString(borderSize / 2) +
+        ' 0 ' +
+        pixelString(borderSize / 4),
     })
     $('#bubble-tail').css({
-      left: (tailLeft - borderSize).toString() + 'px',
-      top: (tailTop - borderSize).toString() + 'px',
-      width: tailWidth.toString() + 'px',
-      height: tailHeight.toString() + 'px',
+      left: pixelString(tailLeft - borderSize),
+      top: pixelString(tailTop - borderSize),
+      width: pixelString(tailWidth),
+      height: pixelString(tailHeight),
       // border: (bubbleFontSize / 4).toString() + 'px solid black',
       boxShadow:
-        (1 * borderSize).toString() +
-        'px ' +
-        (0.5 * borderSize).toString() +
-        'px #000, ' +
-        (3 * borderSize).toString() +
-        'px ' +
-        (0.5 * borderSize).toString() +
-        'px #ffd, ' +
-        (4 * borderSize).toString() +
-        'px ' +
-        (1 * borderSize).toString() +
-        'px #000',
+        pixelString(1 * borderSize) +
+        ' ' +
+        pixelString(0.5 * borderSize) +
+        ' ' +
+        '#000, ' +
+        pixelString(3 * borderSize) +
+        ' ' +
+        pixelString(0.5 * borderSize) +
+        ' ' +
+        '#ffd, ' +
+        pixelString(4 * borderSize) +
+        ' ' +
+        pixelString(1 * borderSize) +
+        ' ' +
+        ' #000',
     })
 
     // $('#mrcanoehead').show()

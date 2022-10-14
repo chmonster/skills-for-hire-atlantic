@@ -199,7 +199,7 @@ input, select, option, textarea, .modal-button {
   left: 15vw;
   width: 70vw;
   height: 70vh;
-  background: radial-gradient(rgba(255,0,0,1) 50%, rgba(255,0,0,0) 70%);
+  background: radial-gradient(rgba(255,0,0,1) 50%, rgba(255,0,0,0.5));
   pointer-events: none;
   
 }

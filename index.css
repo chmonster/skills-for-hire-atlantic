@@ -16,10 +16,6 @@
     font-size: 3vw;
     padding: 1vw 0;
   }
-  input, select, option, textarea, .modal button {
-    font-size: 1.8vw;
-    padding: 1vw 0vw;
-  }
 
 }
 
@@ -40,14 +36,10 @@
     font-size: 3vw;
     padding: 1vw 0;
   }
-  input, select, option, textarea, .modal button {
-    font-size: 1.8vw;
-    padding: 1vw 0vw;
-  }
 }
 
 /* For desktops */
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (min-height: 562px) {
   #canoe-img, #photo-area, article {
     width: 1000px;
   }
@@ -63,11 +55,10 @@
     font-size: 30px;
     padding: 10px 0;
   }
-  input, select, option, textarea, .modal button {
-    font-size: 18px;
-    padding: 10px 0px;
-  }
 }
+
+
+
 
 body {
   background-color: black;
@@ -77,10 +68,9 @@ body {
 
 #mrcanoehead {
   position:absolute;
+  display: none; 
   /* z-index: 2; */
 }
-
-
 
 header {
   display: flex;
@@ -127,17 +117,6 @@ article {
   text-align: justify; 
 }
 
-label {
-  display: inline-block;
-  width: 38%;
-  text-align: right;
-}
-
-input, select, option, textarea, .modal-button {
-  width: 57%;
-  text-align: center;
-}
-
 #photo-area {
   z-index: 0;
 }
@@ -152,6 +131,10 @@ input, select, option, textarea, .modal-button {
 
 .adventure h2 {
   text-decoration: underline;
+}
+
+#hamburger:hover, #paddle:hover {
+  background-color: black;
 }
 
 /* bubble style from https://codepen.io/alvaromontoro/pen/zYqzgoy */
@@ -179,6 +162,26 @@ input, select, option, textarea, .modal-button {
   z-index: 3;
 }
 
+/* form controls */
+
+label {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+input, select, option, textarea, .modal-button {
+  width: 60%;
+  text-align: center;
+}
+
+
+label, input, select, option, textarea, .modal button, .modal h3, .modal-content {
+  font-size: 4vmin;
+  padding: 0.5vmin;
+  margin: 0.5vmin;
+}
+
 .modal{
   display:flex;
   z-index:100;
@@ -186,15 +189,14 @@ input, select, option, textarea, .modal-button {
   justify-content:center;
   opacity:0;
   transition: .3s opacity ease-in-out;
-  padding: 2em;
-  position:fixed;
+  /* padding: 1vw; */
+  position: fixed;
   top: 15vh;
   left: 15vw;
   width: 70vw;
   height: 70vh;
   background: radial-gradient(rgba(255,0,0,1) 50%, rgba(255,0,0,0.5));
-  pointer-events: none;
-  
+  pointer-events: none;  
 }
 
 .modal:target{
@@ -217,6 +219,7 @@ input, select, option, textarea, .modal-button {
   text-decoration: none;
   padding-right: 0.5em;
 }
+
 .close-button:hover {
   color: black;
 }
@@ -226,6 +229,3 @@ input, select, option, textarea, .modal-button {
   margin-right: auto;
 }
 
-#hamburger:hover, #paddle:hover {
-  background-color: black;
-}

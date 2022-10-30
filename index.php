@@ -11,5 +11,5 @@
     include_once('thank-you.php');
   }
     
-  include_once('adventures.php');
+  include_once('all-adventures.php');
   include_once('footer.php');

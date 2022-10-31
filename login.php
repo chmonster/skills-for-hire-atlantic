@@ -3,9 +3,11 @@
 //open database connection
 function login_db() {
   $servername = "localhost";
-  // echo var_dump($_ENV);
+
+  //yeahhhh, i'm not putting login info here, GitGuardian will spam me
   $username = getenv('MRC_USERNAME');
   $password = getenv('MRC_PASSWORD');
+  
   $dbname = 'halifaxcanoeandkayak';
 
   // Create connection

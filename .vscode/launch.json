@@ -37,6 +37,10 @@
         "-S",
         "localhost:0"
       ],
+      "env": {
+        "MRC_USERNAME": "mrcanoehead",
+        "MRC_PASSWORD": "MrC4n0eh3ad"
+      },
       "program": "",
       "cwd": "${workspaceRoot}",
       "port": 0,

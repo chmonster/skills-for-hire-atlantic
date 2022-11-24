@@ -1,4 +1,7 @@
 <?php 
+
+  $today = date("Y-m-d");
+  
   echo <<<BOOKING
 
   <article id='adventure-form' class='modal'>
@@ -14,7 +17,7 @@
         <option name='Sydney'>Sydney</option>
       </select><br />
       <label for='date'>Date:</label>
-      <input type='date' name='date' id='date' /><br />
+      <input type='date' name='date' id='date' value='$today'/><br />
       <label for="comments">Comments:</label>
       <textarea name='comments'></textarea><br />
       <label></label>

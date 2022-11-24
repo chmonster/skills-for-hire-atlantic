@@ -1,5 +1,5 @@
 <?php
-  include_once('login.php');
+  include_once('login_db.php');
   $conn = login_db();
 
   const DATE_FORMAT = 'l, F j, Y';
@@ -12,6 +12,7 @@
   $heading=test_input($conn, 'heading');
   $tripDate=test_input($conn, 'tripDate');
   $tripDateFormatted=date(DATE_FORMAT, strtotime($tripDate));
+  // echo $tripDateFormatted;
   $duration=test_input($conn, 'duration');
   $summary=test_input($conn, 'summary');
 

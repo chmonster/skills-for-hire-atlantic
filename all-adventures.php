@@ -1,5 +1,5 @@
 <?php 
-  include_once('login.php');
+  include_once('login_db.php');
   $conn = login_db();
 
   date_default_timezone_set('America/Halifax');
@@ -41,7 +41,7 @@
   }
 ?>
 
-</article>
+  </article>
 
 <?php 
   $conn->close();

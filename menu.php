@@ -10,7 +10,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/#adventure-form">Book Trip</a></li>
-          <li><a href="/#admin-form">Admin Login</a></li>
+          <li><a href="/#admin-login">Admin Login</a></li>
         </ul>
       </nav>
     </div>

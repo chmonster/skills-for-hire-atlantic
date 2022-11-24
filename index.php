@@ -13,10 +13,12 @@
 
   if(isset($_POST['heading'])){
     include_once('admin-confirm.php');
-  }
-  else {
+  } else if(isset($_POST['user'])) {
     include_once('admin-add.php');
-  } 
+  } else {
+    include_once('admin-login.php'); 
+  }
+
 
   include_once('all-adventures.php');
   include_once('footer.php');

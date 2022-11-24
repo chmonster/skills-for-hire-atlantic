@@ -7,7 +7,7 @@ function login_db() {
   //yeahhhh, i'm not putting login info here, GitGuardian will spam me
   $username = getenv('MRC_USERNAME');
   $password = getenv('MRC_PASSWORD');
-  
+
   $dbname = 'halifaxcanoeandkayak';
 
   // Create connection
@@ -21,3 +21,4 @@ function login_db() {
   return $mysqli;
 }
 
+ 
